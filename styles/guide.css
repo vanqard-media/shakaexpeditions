@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo general */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f5f7fa;
+  color: #1f2933;
+}
+
+/* Contenedor */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Título */
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  color: #0e8e9e;
+}
+
+/* Tarjeta descarga */
+.pdfDownload {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover efecto */
+.pdfDownload:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Link limpio */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imagen */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto opcional debajo */
+.download-text {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.pdfDownload::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.4), transparent 60%);
+}
+
+.pdfDownload:hover::after {
+  opacity: 1;
+}
